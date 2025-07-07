@@ -1,0 +1,158 @@
+// const num1=10;
+// // num1=20;
+// console.log(num1);
+
+const { STRING_LITERAL_DROP_BUNDLE } = require("next/dist/shared/lib/constants");
+const { comma } = require("postcss/lib/list");
+const { resolve } = require("styled-jsx/css");
+
+
+// let emp={
+//     first_name:"Rohit",
+//     last_name:"Kokate",
+//     age:20,
+//     address:{
+//         dis:"Nashik",
+//         tal:"Sinner",
+//         post:"Somthane"
+//     },
+//     company:"Thinkitive"
+// }
+// console.log(emp.address.dis)
+
+
+
+//ARRAY 
+
+// let arr1=new Array(10,20,30);
+// console.log(arr1);
+
+// arr1=Array(4);
+// console.log(arr1.length);
+
+// let Arr=[10,20,"ROhit",23.3];
+// console.log(Arr);
+// Arr[2]="Kokate";
+// console.log(Arr);
+
+// var numbers = [1,2,3,4,5];
+// var newNumbers = numbers.slice(1,4);
+// console.log(numbers);
+
+// console.log(newNumbers);
+
+// let odds = [1, 3, 5];
+// let evens = [2, 4, 6];
+
+// let results = [...odds, ...evens];
+
+// console.log({ results });
+
+// let arr = ['hello', 'ROhit', 'Kokate', 'This', 'is'];
+// arr.forEach(function (arrn, index) {
+//     console.log(`Name at index ${index} : ${arrn} `);
+
+// });
+// outerloop: for (let index = 0; index < 6; index++) {
+//     innerloop: for (let i = 0; i < 7; i++) {
+//         if(index>5){
+//             continue outerloop;
+//         }
+//         console.log(i);
+        
+        
+//     }
+    
+// }
+
+
+ var a=20;
+// function name() {
+//     // let str ="ROhit";
+    
+//     // console.log(str,a,m);  
+// }
+// name();
+// if(a>=10){
+//         var m=20;
+//         // console.log(str,a,m);  
+//         console.log(m);
+        
+
+// }
+// console.log(m);  
+
+// function put(toy, toyBox = []) {
+//     toyBox.push(toy);
+//     return toyBox;
+// }
+
+// put('toy');
+// // console.log(put('Toy Car'));
+// // -> ['Toy Car']
+// console.log(put('Teddy Bear'));
+
+// function getScores() {
+//   return [70, 80, 90, 100];
+// }
+
+// let [x, y, ...args] = getScores();
+
+// console.log({ x, y, args });
+
+// let arr=(element) => {
+//     return element%2==0;
+// }
+// let result=[2,3,6,8].every(arr);
+// console.log(result);
+// let result=[2,4,6,8].every((e) => ( e%2 === 0 ));
+// console.log(result);
+
+
+
+// let p=new Promise((resolve,reject) =>{
+//     let a=1+2;
+//     if(a==2){
+//         resolve("SUCESS");
+//     }
+//     else{
+//         reject("Failed");
+//     }
+// })
+
+// p.then((messae)=>{
+//     console.log("This is From "+messae);
+// }).catch((messae) => {
+//     console.log("This is From "+messae);
+// })
+
+function makeReq(location){
+    return new Promise((resolve,reject) => {
+        console.log(`Making the response Location ${location}`);
+        if (location=="Google") {
+            resolve("Google say hi");
+        }
+        else{
+            reject("We Cannot talk to google");
+        }
+    })
+}
+
+function procReq(response) {
+    return new Promise((resolve,reject) => {
+        console.log("Promises Resolve");
+        resolve("Extra information",response)
+    })
+}
+async function Process() {
+    //try{
+        const req=await makeReq("Google");
+        console.log("Response recived");
+        const procResp=await procReq(req);
+        // console.log(Respo);
+    // }catch (err){
+    //     console.log(err);
+    // }
+}
+
+Process();
