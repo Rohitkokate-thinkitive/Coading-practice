@@ -2,9 +2,9 @@
 // // num1=20;
 // console.log(num1);
 
-const { STRING_LITERAL_DROP_BUNDLE } = require("next/dist/shared/lib/constants");
-const { comma } = require("postcss/lib/list");
-const { resolve } = require("styled-jsx/css");
+// const { STRING_LITERAL_DROP_BUNDLE } = require("next/dist/shared/lib/constants");
+// const { comma } = require("postcss/lib/list");
+// const { resolve } = require("styled-jsx/css");
 
 
 // let emp={
@@ -19,11 +19,6 @@ const { resolve } = require("styled-jsx/css");
 //     company:"Thinkitive"
 // }
 // console.log(emp.address.dis)
-
-
-
-//ARRAY 
-
 // let arr1=new Array(10,20,30);
 // console.log(arr1);
 
@@ -66,7 +61,7 @@ const { resolve } = require("styled-jsx/css");
 // }
 
 
-var a = 20;
+// var a = 20;
 // function name() {
 //     // let str ="ROhit";
 
@@ -110,21 +105,21 @@ var a = 20;
 
 
 
-// let p=new Promise((resolve,reject) =>{
-//     let a=1+2;
-//     if(a==2){
-//         resolve("SUCESS");
-//     }
-//     else{
-//         reject("Failed");
-//     }
-// })
+let p=new Promise((resolve,reject) =>{
+    let a=1+1;
+    if(a==2){
+        resolve("SUCESS");
+    }
+    else{
+        reject("Failed");
+    }
+})
 
-// p.then((messae)=>{
-//     console.log("This is From "+messae);
-// }).catch((messae) => {
-//     console.log("This is From "+messae);
-// })
+p.then((messae)=>{
+    console.log("This is From "+messae);
+}).catch((messae) => {
+    console.log("This is From "+messae);
+})
 
 // function makeReq(location){
 //     return new Promise((resolve,reject) => {
@@ -218,5 +213,3 @@ var a = 20;
 //     const rndCol = `rgb(${random(102)} ${random(255)} ${random(255)})`;
 //     document.body.style.backgroundColor = rndCol;
 // });
-
-
