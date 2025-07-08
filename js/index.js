@@ -126,33 +126,70 @@ const { resolve } = require("styled-jsx/css");
 //     console.log("This is From "+messae);
 // })
 
-function makeReq(location){
-    return new Promise((resolve,reject) => {
-        console.log(`Making the response Location ${location}`);
-        if (location=="Google") {
-            resolve("Google say hi");
-        }
-        else{
-            reject("We Cannot talk to google");
-        }
-    })
+// function makeReq(location){
+//     return new Promise((resolve,reject) => {
+//         console.log(`Making the response Location ${location}`);
+//         if (location=="Google") {
+//             resolve("Google say hi");
+//         }
+//         else{
+//             reject("We Cannot talk to google");
+//         }
+//     })
+// }
+
+// function procReq(response) {
+//     return new Promise((resolve,reject) => {
+//         console.log("Promises Resolve");
+//         resolve("Extra information",response)
+//     })
+// }
+// async function Process() {
+//     //try{
+//         const req=await makeReq("Google");
+//         console.log("Response recived");
+//         const procResp=await procReq(req);
+//         // console.log(Respo);
+//     // }catch (err){
+//     //     console.log(err);
+//     // }
+// }
+
+// Process();
+
+
+let userRole=new Map();
+let john = {name: 'John Doe'},lily = {name: 'Lily Bush'},peter = {name: 'Peter Drucker'};
+userRole.set(john,"admin");
+console.log(userRole instanceof Map);
+userRole.set(lily,"editor");
+userRole.set(peter,"Subsciber");
+console.log(userRole.get(john));
+
+console.log("------------------------------------------------------\ ");
+
+for(const use of userRole.keys()){
+    console.log(use.name);
+}
+console.log("-------------------------------------------------------\ ");
+
+for(const use of userRole.values()){
+    console.log(use);
 }
 
-function procReq(response) {
-    return new Promise((resolve,reject) => {
-        console.log("Promises Resolve");
-        resolve("Extra information",response)
-    })
-}
-async function Process() {
-    //try{
-        const req=await makeReq("Google");
-        console.log("Response recived");
-        const procResp=await procReq(req);
-        // console.log(Respo);
-    // }catch (err){
-    //     console.log(err);
-    // }
-}
+userRole.forEach((role,user)=>{
+    console.log(`${user.name} -------> ${role}`);
+});
 
-Process();
+console.log("----------------------------");
+
+let val1=[...userRole.keys()];
+let val=[...userRole.values()];
+console.log(val);
+console.log(val1);
+
+userRole.delete(undefined);
+console.log(userRole);
+
+// userRole.clear();
+// console.log(userRole);
