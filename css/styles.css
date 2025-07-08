@@ -43,6 +43,10 @@ p#third-para{
     color: white;
     font-family: 'Courier New', Courier, monospace;
 }
+button{
+    margin: 10px;
+    color: rgba(64, 52, 51, 0.723);
+}
 footer{
     background-color: rgb(192, 130, 83);
     margin: 0;

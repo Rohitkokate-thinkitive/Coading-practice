@@ -59,17 +59,17 @@ const { resolve } = require("styled-jsx/css");
 //             continue outerloop;
 //         }
 //         console.log(i);
-        
-        
+
+
 //     }
-    
+
 // }
 
 
- var a=20;
+var a = 20;
 // function name() {
 //     // let str ="ROhit";
-    
+
 //     // console.log(str,a,m);  
 // }
 // name();
@@ -77,7 +77,7 @@ const { resolve } = require("styled-jsx/css");
 //         var m=20;
 //         // console.log(str,a,m);  
 //         console.log(m);
-        
+
 
 // }
 // console.log(m);  
@@ -158,38 +158,65 @@ const { resolve } = require("styled-jsx/css");
 // Process();
 
 
-let userRole=new Map();
-let john = {name: 'John Doe'},lily = {name: 'Lily Bush'},peter = {name: 'Peter Drucker'};
-userRole.set(john,"admin");
-console.log(userRole instanceof Map);
-userRole.set(lily,"editor");
-userRole.set(peter,"Subsciber");
-console.log(userRole.get(john));
+// let userRole=new Map();
+// let john = {name: 'John Doe'},lily = {name: 'Lily Bush'},peter = {name: 'Peter Drucker'};
+// userRole.set(john,"admin");
+// console.log(userRole instanceof Map);
+// userRole.set(lily,"editor");
+// userRole.set(peter,"Subsciber");
+// console.log(userRole.get(john));
 
-console.log("------------------------------------------------------\ ");
+// console.log("------------------------------------------------------\ ");
 
-for(const use of userRole.keys()){
-    console.log(use.name);
-}
-console.log("-------------------------------------------------------\ ");
+// for(const use of userRole.keys()){
+//     console.log(use.name);
+// }
+// console.log("-------------------------------------------------------\ ");
 
-for(const use of userRole.values()){
-    console.log(use);
-}
+// for(const use of userRole.values()){
+//     console.log(use);
+// }
 
-userRole.forEach((role,user)=>{
-    console.log(`${user.name} -------> ${role}`);
-});
+// userRole.forEach((role,user)=>{
+//     console.log(`${user.name} -------> ${role}`);
+// });
 
-console.log("----------------------------");
+// console.log("----------------------------");
 
-let val1=[...userRole.keys()];
-let val=[...userRole.values()];
-console.log(val);
-console.log(val1);
+// let val1=[...userRole.keys()];
+// let val=[...userRole.values()];
+// console.log(val);
+// console.log(val1);
 
-userRole.delete(undefined);
-console.log(userRole);
+// userRole.delete(undefined);
+// console.log(userRole);
 
 // userRole.clear();
 // console.log(userRole);
+
+// function Task(message) {
+//     let num1=100;
+//     while(num1!=0){
+//         num1--;
+//     }
+//     console.log("Download the file");
+// }
+
+// console.log("Start the function");
+// setTimeout(()=>{
+//     Task("Download the file");
+// },1000);
+// console.log("Done");
+
+// const btn = document.querySelector("button");
+
+// function random(number) {
+//     return Math.floor(Math.random() * (number + 1));
+// }
+
+// btn.addEventListener("click", () => {
+//     const rndCol = `rgb(${random(102)} ${random(255)} ${random(255)})`;
+//     document.body.style.backgroundColor = rndCol;
+// });
+
+
